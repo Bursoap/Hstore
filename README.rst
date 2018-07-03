@@ -74,3 +74,9 @@ Example: python dict that describes fields/types etc.
 **Q:** Do we need to store the references to other objects?
 
 **A:** Good question. Let's assume "no" for the time being.
+
+**Q:** What conventions should be kept?
+
+**A:** Let's assume it should follow standard Python conventions like: be PEP-8 complaint, follow The Zen of Python: https://www.python.org/dev/peps/pep-0020/ In broader sense it should follow well known software principles like SOLID, KISS, DRY etc.
+
+
