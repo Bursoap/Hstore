@@ -26,7 +26,7 @@ How to set up this project?
 The project has been built using cookiecutter-django template (https://github.com/pydanny/cookiecutter-django). Please refer to its docs for some more information. Launching the project follows well known guidelines of setting up a standard django project:
 
 - creating virtualenv
-- installing requirements
+- installing requirements (local.txt)
 - running migrations
 - running django dev server
 
