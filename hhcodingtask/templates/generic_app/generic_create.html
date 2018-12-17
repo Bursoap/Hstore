@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h3 align="center">ANY DATA FORM</h3>
+    <form class="form-horizontal" method="post" action="{% url 'generic_app:create_generic' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Create</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

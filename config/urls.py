@@ -2,11 +2,12 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.urls import path
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 urlpatterns = [
-    url(r"^$", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    url(r"^home/$", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     url(
         r"^about/$",
         TemplateView.as_view(template_name="pages/about.html"),
@@ -24,6 +25,10 @@ urlpatterns = [
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )
+
+urlpatterns += [
+    path('', include('hhcodingtask.generic_app.urls', namespace='generic_app')),
+]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

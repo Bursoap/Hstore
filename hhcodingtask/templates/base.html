@@ -37,7 +37,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{% url 'home' %}">HH Coding Task</a>
+        <a class="navbar-brand" href="{% url 'generic_app:create_generic' %}">HH Coding Task</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -76,7 +76,7 @@
 
       {% if messages %}
           {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" style="text-align: center">{{ message }}</div>
           {% endfor %}
       {% endif %}
 

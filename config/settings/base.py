@@ -61,6 +61,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
     # 'django.contrib.humanize', # Handy template tags
     'django.contrib.admin',
+    'django.contrib.postgres',
 ]
 THIRD_PARTY_APPS = [
     'crispy_forms',
@@ -68,9 +69,11 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
+    'django_admin_hstore_widget',
 ]
 LOCAL_APPS = [
     'hhcodingtask.users.apps.UsersConfig',
+    'hhcodingtask.generic_app.apps.GenericAppConfig',
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
