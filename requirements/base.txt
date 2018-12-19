@@ -3,6 +3,7 @@ awesome-slugify==1.6.5  # https://github.com/dimka665/awesome-slugify
 Pillow==5.1.0  # https://github.com/python-pillow/Pillow
 argon2-cffi==18.1.0  # https://github.com/hynek/argon2_cffi
 redis>=2.10.5  # https://github.com/antirez/redis
+django-admin-hstore-widget==1.0.1 # https://github.com/PokaInc/django-admin-hstore-widget
 
 # Django
 # ------------------------------------------------------------------------------
