@@ -1,14 +1,17 @@
 from django import forms
 
 from . import models
-from . utils import GeneralFormFieldsBuilderMixin
+from . import scheme
+from . utils import HstoreFieldsBuilderMixin
 
 
-class GenericCreateForm(forms.ModelForm, GeneralFormFieldsBuilderMixin):
+class GenericCreateForm(forms.ModelForm, HstoreFieldsBuilderMixin):
 
     class Meta:
         model = models.GenericModel
         exclude = ['data', ]
+
+    scheme = scheme.GENERAL_SCHEME
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

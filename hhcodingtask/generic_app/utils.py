@@ -1,14 +1,14 @@
 from django import forms
-from django.conf import settings
 
 
-class GeneralFormFieldsBuilderMixin:
+class HstoreFieldsBuilderMixin:
 
     _fields_names_list = []
+    scheme = None
 
     def add_fields_from_scheme(self):
-        if settings.GENERAL_SCHEME:
-            for field_scheme in settings.GENERAL_SCHEME:
+        if self.scheme:
+            for field_scheme in self.scheme:
                 try:
                     field_name = field_scheme['field_name']
                     field_type = field_scheme['field_type']
@@ -22,7 +22,7 @@ class GeneralFormFieldsBuilderMixin:
                 self.fields[field_name] = field(**kwargs)
 
     def add_data_to_hstore(self, instance, hstore_field_name):
-        if settings.GENERAL_SCHEME:
+        if self.scheme:
             data = {
                 key: val for key, val in self.cleaned_data.items() if key in self._fields_names_list
             }
