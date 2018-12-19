@@ -2,7 +2,7 @@ from django import forms
 
 from . import models
 from . import scheme
-from . utils import HstoreFieldsBuilderMixin
+from . mixins import HstoreFieldsBuilderMixin
 
 
 class GenericCreateForm(forms.ModelForm, HstoreFieldsBuilderMixin):

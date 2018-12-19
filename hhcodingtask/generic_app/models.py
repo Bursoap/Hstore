@@ -6,8 +6,8 @@ from django.contrib.postgres.fields import HStoreField
 
 class GenericModel(models.Model):
 
-    name = models.CharField(max_length=50, unique=True)
+    general_name = models.CharField(max_length=50, unique=True)
     data = HStoreField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.general_name

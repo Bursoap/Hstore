@@ -38,4 +38,4 @@ In generic app you can see a scheme module which provides GENERAL_SCHEME dict. F
 - field_type
 - kwargs
 
-Use kwargs to add args for field, such as max_length, validators. For some fields kwargs can be optional.
+Use kwargs to add arguments for field, such as max_length, validators. For some fields kwargs can be optional.

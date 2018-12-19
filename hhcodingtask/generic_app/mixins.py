@@ -13,9 +13,7 @@ class HstoreFieldsBuilderMixin:
                     field_name = field_scheme['field_name']
                     field_type = field_scheme['field_type']
                 except KeyError:
-                    raise KeyError(
-                        'please, set field_name and field_type in field scheme'
-                    )
+                    raise KeyError('please, set field_name and field_type in field scheme')
                 self._fields_names_list.append(field_name)
                 field = getattr(forms, field_type)
                 kwargs = field_scheme.get('kwargs', {})
